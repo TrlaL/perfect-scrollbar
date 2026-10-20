@@ -58,7 +58,7 @@ export default function(i) {
       if (deltaX === 0 && deltaY !== 0) {
         return [-deltaY, -deltaX];
       } else {
-        return [deltaY, deltaX]
+        return [deltaX, deltaY];
       }
     }
     return [deltaX, deltaY];

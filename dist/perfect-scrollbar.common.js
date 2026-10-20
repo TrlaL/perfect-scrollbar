@@ -1,5 +1,5 @@
 /*!
- * perfect-scrollbar v1.5.6
+ * perfect-scrollbar v1.5.6.1
  * Copyright 2026 Hyunje Jun, MDBootstrap and Contributors
  * Licensed under MIT
  */
@@ -820,7 +820,7 @@ function wheel(i) {
       if (deltaX === 0 && deltaY !== 0) {
         return [-deltaY, -deltaX];
       } else {
-        return [deltaY, deltaX]
+        return [deltaX, deltaY];
       }
     }
     return [deltaX, deltaY];
