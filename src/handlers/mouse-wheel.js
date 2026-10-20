@@ -55,7 +55,11 @@ export default function(i) {
 
     if (e.shiftKey) {
       // reverse axis with shift key
-      return [-deltaY, -deltaX];
+      if (deltaX === 0 && deltaY !== 0) {
+        return [-deltaY, -deltaX];
+      } else {
+        return [deltaY, deltaX]
+      }
     }
     return [deltaX, deltaY];
   }

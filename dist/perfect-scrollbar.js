@@ -1,6 +1,6 @@
 /*!
  * perfect-scrollbar v1.5.6
- * Copyright 2025 Hyunje Jun, MDBootstrap and Contributors
+ * Copyright 2026 Hyunje Jun, MDBootstrap and Contributors
  * Licensed under MIT
  */
 
@@ -821,7 +821,11 @@
 
       if (e.shiftKey) {
         // reverse axis with shift key
-        return [-deltaY, -deltaX];
+        if (deltaX === 0 && deltaY !== 0) {
+          return [-deltaY, -deltaX];
+        } else {
+          return [deltaY, deltaX]
+        }
       }
       return [deltaX, deltaY];
     }
